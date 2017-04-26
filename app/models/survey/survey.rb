@@ -14,6 +14,7 @@ class Survey::Survey < ActiveRecord::Base
   accepts_nested_attributes_for :questions,
     :reject_if => ->(q) { q[:text].blank? },
     :allow_destroy => true
+  belongs_to :program_week, class_name: 'ProgramWeek'
 
   # scopes
   scope :active,   -> { where(:active => true) }
