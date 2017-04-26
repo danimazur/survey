@@ -5,6 +5,7 @@ class Survey::Survey < ActiveRecord::Base
   acceptable_attributes :name, :description,
     :finished,
     :active,
+    :program_week_id,
     :attempts_number,
     :questions_attributes => Survey::Question::AccessibleAttributes
 
