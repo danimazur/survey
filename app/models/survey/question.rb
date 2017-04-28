@@ -5,7 +5,7 @@ class Survey::Question < ActiveRecord::Base
   acceptable_attributes :text, :survey, :options_attributes => Survey::Option::AccessibleAttributes
 
   # relations
-  belongs_to :survey
+  belongs_to :survey, touch: true
   has_many   :options, :dependent => :destroy
   accepts_nested_attributes_for :options,
     :reject_if => ->(a) { a[:text].blank? },
