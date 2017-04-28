@@ -5,7 +5,7 @@ class Survey::Option < ActiveRecord::Base
   acceptable_attributes :text, :correct, :weight
 
   #relations
-  belongs_to :question
+  belongs_to :question, touch: true
 
   # validations
   validates :text, :presence => true, :allow_blank => false
