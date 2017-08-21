@@ -2,7 +2,7 @@ class Survey::Survey < ActiveRecord::Base
 
   self.table_name = "survey_surveys"
 
-  acceptable_attributes :name, :description,
+  acceptable_attributes :name, :description, :completion_message,
     :finished,
     :active,
     :program_week_id,
