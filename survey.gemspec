@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.files         = Dir["{app,lib,config}/**/*"] + ["MIT-LICENSE", "Rakefile", "Gemfile", "README.md"]
   s.require_paths = %w(lib)
 
-  s.add_dependency("rails", ["~> 5.0.7"])
-  s.add_dependency("railties", "~> 5.0.7")
+  s.add_dependency("rails", ["~> 6.0"])
+  s.add_dependency("railties", "~> 6.0")
   s.add_development_dependency("mocha", ['~> 1.11'])
   s.add_development_dependency("faker", ['~> 1.8', '>= 1.8.7'])
   s.add_development_dependency("rake", ['~> 13.0', '>= 13.0.1'])
